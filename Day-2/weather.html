@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <style>
+        body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Blurred background layer */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("twillight-sky-blurred-background-ai-generated-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);   /* 🔥 Blur strength */
+    transform: scale(1.1); /* Prevents white edges after blur */
+    z-index: -1;
+}
+
+
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            width: 300px;
+            color: #fff;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 8px;
+            width: 80%;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: none;
+            background-color: #ffffff;
+            color: #0077ff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e6e6e6;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        .weather-icon {
+            width: 80px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>🌤 Weather App</h2>
+
+        <input type="text" id="city" placeholder="Enter city name">
+        <br>
+        <button id="getWeatherBtn">Get Weather</button>
+
+        <div id="result"></div>
+        <img id="icon" class="weather-icon" src="" alt="">
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+</html>

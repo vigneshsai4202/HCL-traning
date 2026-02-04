@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+    <style >
+
+    
+        body{
+            background-color: rgb(36, 33, 52);
+
+        }
+        .content{
+            text-align: center;
+            text-size-adjust: ;
+            background-color: aliceblue;
+            width: 400px;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 8px;
+            font-size: large;
+
+
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="content">
+        <h2>College Admission Form</h2>
+
+    <form action="#" method="post">
+
+        <!-- Full Name -->
+        <label for="fullname">Full Name</label><br>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <!-- Gender -->
+        <label>Gender</label><br>
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Others"> Others</label>
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Phone Number -->
+        <label for="phone">Phone Number</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="10-digit number" pattern="[0-9]{10}" required><br><br>
+
+        <!-- Address -->
+        <label for="address">Address</label><br>
+        <textarea id="address" name="address" rows="3" required></textarea><br><br>
+
+        <!-- Course Selection -->
+        <label>Select Your Course</label><br>
+        <label><input type="radio" name="course" value="CSE" required> CSE</label>
+        <label><input type="radio" name="course" value="ECE"> ECE</label>
+        <label><input type="radio" name="course" value="IT"> IT</label>
+        <br><br>
+
+        <!-- Previous Qualification -->
+        <label for="qualification">Previous Qualification</label><br>
+        <input type="text" id="qualification" name="qualification" placeholder="10th / 12th" required><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit">Submit Application</button>
+
+    </form>
+</div>
+    <script src="admission_user_reg_page.js"></script> 
+
+</body>
+</html>
